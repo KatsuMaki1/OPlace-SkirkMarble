@@ -2848,7 +2848,7 @@ function showWrongPixelsDialog(instance) {
           const zoom = 19.5;
           
           if (navigationMethod === 'openurl') {
-            const url = `https://wplace.live/?lat=${latLng.lat}&lng=${latLng.lng}&zoom=${zoom}`;
+            const url = `https://openplace.live/?lat=${latLng.lat}&lng=${latLng.lng}&zoom=${zoom}`;
             window.location.href = url;
           } else {
             flyToLatLng(latLng.lat, latLng.lng, zoom);
@@ -3518,7 +3518,7 @@ function showTemplateManageDialog(instance) {
             
             if (navigationMethod === 'openurl') {
               const zoom = 13.62;
-              const url = `https://wplace.live/?lat=${latLng.lat}&lng=${latLng.lng}&zoom=${zoom}`;
+              const url = `https://openplace.live/?lat=${latLng.lat}&lng=${latLng.lng}&zoom=${zoom}`;
               window.location.href = url;
             } else {
               flyToLatLng(latLng.lat, latLng.lng);
@@ -3805,7 +3805,7 @@ function buildOverlayMain() {
     .addDiv({'id': 'bm-contain-header'})
       .addDiv({'id': 'bm-bar-drag'}).buildElement()
       .addDiv({'id': 'bm-title-container'})
-        .addImg({'alt': 'Blue Marble Icon - Click to minimize/maximize', 'src': 'https://raw.githubusercontent.com/Seris0/Wplace-SkirkMarble/main/dist/assets/Favicon.png', 'style': 'cursor: pointer; width: 42px; height: 42px;'}, 
+        .addImg({'alt': 'Blue Marble Icon - Click to minimize/maximize', 'src': 'https://raw.githubusercontent.com/Seris0/OPlace-SkirkMarble/main/dist/assets/Favicon.png', 'style': 'cursor: pointer; width: 42px; height: 42px;'}, 
           (instance, img) => {
           /** Click event handler for overlay minimize/maximize functionality.
            * 
@@ -4379,7 +4379,7 @@ function buildOverlayMain() {
               
               if (navigationMethod === 'openurl') {
                 const zoom = 13.62;
-                const url = `https://wplace.live/?lat=${lat}&lng=${lng}&zoom=${zoom}`;
+                const url = `https://openplace.live/?lat=${lat}&lng=${lng}&zoom=${zoom}`;
                 window.location.href = url;
               } else {
                 flyToLatLng(lat, lng);
@@ -12811,7 +12811,7 @@ function createSearchWindow() {
 <div class="drag-handle"></div>
 <div class="hdr">
   <h3>
-    <img class="skirk-icon" src="https://raw.githubusercontent.com/Seris0/Wplace-SkirkMarble/main/dist/assets/Favicon.png" alt="Blue Marble" style="width:42px;height:42px;">
+    <img class="skirk-icon" src="https://raw.githubusercontent.com/Seris0/OPlace-SkirkMarble/main/dist/assets/Favicon.png" alt="Blue Marble" style="width:42px;height:42px;">
     Location Search
   </h3>
   <div class="actions">
@@ -12981,8 +12981,8 @@ function createSearchWindow() {
       </div>
       
       <div class="form-group">
-        <label for="location-link">Paste wplace.live link:</label>
-        <input type="text" id="location-link" placeholder="https://wplace.live/?lat=-19.037942104984218&lng=-42.420498378222675&zoom=16.078281108991245">
+        <label for="location-link">Paste openplace.live link:</label>
+        <input type="text" id="location-link" placeholder="https://openplace.live/?lat=-19.037942104984218&lng=-42.420498378222675&zoom=16.078281108991245">
       </div>
       
       <div class="form-group" style="display: flex; gap: 8px;">
@@ -13025,7 +13025,7 @@ function createSearchWindow() {
       return;
     }
     
-    // Extract lat and lng from wplace.live URL
+    // Extract lat and lng from openplace.live URL
     const latMatch = link.match(/lat=([^&]+)/);
     const lngMatch = link.match(/lng=([^&]+)/);
     
@@ -13250,7 +13250,7 @@ function createSearchWindow() {
     
     if (navigationMethod === 'openurl') {
     const zoom = 13.62;
-    const url = `https://wplace.live/?lat=${lat}&lng=${lon}&zoom=${zoom}`;
+    const url = `https://openplace.live/?lat=${lat}&lng=${lon}&zoom=${zoom}`;
     
     // Open in current tab (like the original)
     window.location.href = url;
@@ -13317,7 +13317,7 @@ function createSearchWindow() {
         const lonStr = e.currentTarget.parentElement.dataset.lon;
         debugLog('=== NAVIGATION DEBUG ===');
         debugLog('Clicking result with lat:', latStr, 'lon:', lonStr);
-        debugLog('URL will be:', `https://wplace.live/?lat=${latStr}&lng=${lonStr}&zoom=14.62`);
+        debugLog('URL will be:', `https://openplace.live/?lat=${latStr}&lng=${lonStr}&zoom=14.62`);
         
         if (latStr && lonStr && latStr !== 'undefined' && lonStr !== 'undefined') {
           navigateToLocation(latStr, lonStr);
